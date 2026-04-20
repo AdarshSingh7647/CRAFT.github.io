@@ -21,7 +21,7 @@
 ## Installation
 
 ```bash
-git clone https://github.com/[username]/CRAFT.git
+git clone .
 cd CRAFT
 pip install -e .
 pip install -r requirements.txt
