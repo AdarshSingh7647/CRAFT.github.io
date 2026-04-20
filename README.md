@@ -6,15 +6,16 @@
 [![NQ-Tables](https://img.shields.io/badge/Dataset-NQ--Tables-green)](https://github.com/google-research/tapas)
 [![OTT-QA](https://img.shields.io/badge/Dataset-OTT--QA-green)](https://github.com/wenhuchen/OTT-QA)
 
-**(ACL 2025)** CRAFT is a training-free, three-stage cascaded retrieval framework for open-domain table question answering. It achieves state-of-the-art retrieval on NQ-Tables and strong zero-shot generalisation on OTT-QA with no dataset-specific fine-tuning.
+**(ACL 2026)** CRAFT is a training-free, three-stage cascaded retrieval framework for open-domain table question answering over Tables. It achieves state-of-the-art retrieval on NQ-Tables and strong zero-shot generalisation on OTT-QA dataset with no dataset-specific fine-tuning.
 
-**Stage 1 — SPLADE** sparse retrieval: full corpus → 5,000 candidates  
-**Stage 2 — Dense reranking** (Sentence Transformers / JINA): 5,000 → 100  
-**Stage 3 — Neural reranking** (OpenAI / Gemini embeddings): 100 → top-k  
+
 
 <!-- Figure 1 from the paper. See static/images/README.md if the image is missing. -->
 ![CRAFT Overview](static/images/craft_overview.png)
 
+**Stage 1 — SPLADE** sparse retrieval: full corpus → 5,000 candidates  
+**Stage 2 — Dense reranking** (Sentence Transformers / JINA): 5,000 → 100  
+**Stage 3 — Neural reranking** (OpenAI / Gemini embeddings): 100 → top-k  
 ---
 
 ## Installation
@@ -27,11 +28,6 @@ pip install -r requirements.txt
 cp .env.example .env   # fill in API keys
 ```
 
-**Required environment variables** (see `.env.example`):
-```
-OPENAI_API_KEY   – Stage 3 on NQ-Tables
-GEMINI_API_KEY   – Stage 3 on OTT-QA + preprocessing
-```
 
 **Data** - Pre-computed stage results and supporting data files are available on [Google Drive](https://drive.google.com/drive/u/0/folders/1liOW5iwZLbzvSxZJTPbqnLJ3CEsakN_C). Download and place the files under `datasets/` before running the pipeline.
 
@@ -178,6 +174,12 @@ python scripts/qa_evaluation.py \
 | CRAFT + GPT-4o | **56.76** | **67.72** |
 
 ---
+
+**Required Keys** ():
+```
+OPENAI_API_KEY   – Stage 3 on NQ-Tables
+GEMINI_API_KEY   – Stage 3 on OTT-QA + preprocessing
+```
 
 ## Citation
 
