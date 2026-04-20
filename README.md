@@ -184,11 +184,14 @@ GEMINI_API_KEY   – Stage 3 on OTT-QA + preprocessing
 ## Citation
 
 ```bibtex
-@inproceedings{singh-etal-2025-craft,
-    title = "{CRAFT}: Training-Free Cascaded Retrieval for Tabular {QA}",
-    author = "Singh, Adarsh and Bhandari, Kushal Raj and Gao, Jianxi and Dan, Soham and Gupta, Vivek",
-    booktitle = "Proceedings of ACL 2025",
-    year = "2025"
+@misc{singh2025crafttrainingfreecascadedretrieval,
+      title={CRAFT: Training-Free Cascaded Retrieval for Tabular QA}, 
+      author={Adarsh Singh and Kushal Raj Bhandari and Jianxi Gao and Soham Dan and Vivek Gupta},
+      year={2025},
+      eprint={2505.14984},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.14984}, 
 }
 ```
 
